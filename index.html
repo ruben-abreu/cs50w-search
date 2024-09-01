@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Search</title>
+</head>
+
+<body class="overflow-hidden ">
+    <nav class="flex items-end justify-end  space-x-4 p-4">
+        <a href="/imagesearch.html" class="text-lg">Image Search</a>
+        <a href="/advancedsearch.html" class="text-lg">Advanced Search</a>
+    </nav>
+    <div class="h-screen flex items-center justify-center ">
+        <div class="flex flex-col items-center space-y-4">
+            <img src="/814656-godinava-najprebaruvan-zbor-e-zborot-pandemija.jpg" alt="search logo"
+                class="w-4/12 object-cover">
+            <form class="bg-white border border-gray-300 p-6 shadow-md w-2/4 rounded-xl" id="searchForm"
+                action="https://www.google.com/search" method="GET">
+                <input type="text" name="q" class="border border-gray-400 p-2 mb-4 w-full rounded-xl"
+                    placeholder="Search Google">
+            </form>
+
+            <div class="flex space-x-2 mt-2">
+                <button type="submit" form="searchForm" class="bg-blue-500 text-white px-4 py-2 rounded-md">Google
+                    Search</button>
+                <button type="button" id="luckyButton" class="bg-blue-500 text-white px-4 py-2 rounded-md ">I'm
+                    Feeling Lucky</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('luckyButton').addEventListener('click', function () {
+            const query = document.querySelector('input[name="q"]').value;
+            if (query) {
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=I`;
+            } else {
+                alert('Please enter a search term!');
+            }
+        });
+    </script>
+</body>
+
+</html>

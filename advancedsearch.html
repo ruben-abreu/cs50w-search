@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Search</title>
+</head>
+
+<!-- On the Google Advanced Search page, the user should be able to provide input for the following four fields (taken from Google’s own advanced search options)
+Find pages with… “all these words:”
+Find pages with… “this exact word or phrase:”
+Find pages with… “any of these words:”
+Find pages with… “none of these words:” -->
+
+
+<body class="overflow-hidden">
+    <nav class="flex items-end justify-end  space-x-4 p-4">
+        <a href="/index.html" class="text-lg">Back to Google Search</a>
+    </nav>
+    <div class="h-screen flex items-center justify-center ">
+        <div class="flex flex-col items-center space-y-4">
+            <img src="/814656-godinava-najprebaruvan-zbor-e-zborot-pandemija.jpg" alt="search logo"
+                class="w-4/12 object-cover">
+            <form class="bg-white border border-gray-300 p-6 shadow-md w-2/4 rounded-xl" id="searchForm"
+                action="https://www.google.com/search?tbm=isch" method="GET">
+                <input type="text" name="q" class="border border-gray-400 p-2 mb-4 w-full rounded-xl"
+                    placeholder="Search Image">
+            </form>
+
+            <div class="flex space-x-2 mt-2">
+                <button type="submit" form="searchForm" class="bg-blue-500 text-white px-4 py-2 rounded-md ">Search an
+                    image</button>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
